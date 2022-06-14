@@ -5,15 +5,65 @@ html,
 body {
     height: 100%;
     width: 100%;
-    margin: 0;
     font-family: sans-serif;
-    color: #36342F;
+    margin: 0;
+    color: #07DAD0;
 }
 
 #home {
-    background: url(./assets/Images/test_banner1.jpg) no-repeat 50% 50%;
+    background: url(./assets/Images/test_banner_bigScreen.jpg) no-repeat 50% 50%;
+    background: #011C24;
     display: table;
     height: 100%;
     width: 100%;
     background-size: cover;
+}
+
+.page-dark {
+    background-color: #011C24;
+    height: 100%;
+    width: 100%;
+}
+
+.section-title-light {
+    font-size: 5rem;
+    padding: 0;
+    margin-left: 20px;
+    color: #07DAD0;
+}
+
+.page-light {
+    background-color: #07DAD0;
+    height: 100%;
+    width: 100%;
+}
+
+.section-title-dark {
+    font-size: 5rem;
+    padding: 0;
+    margin-left: 20px;
+    color: #011C24;
+}
+
+@media only screen and (max-width: 600px) {
+    #home {
+        // background: url(./assets/Images/test_banner_smallScreen.jpg) no-repeat 50% 50%;
+        background: #011C24;
+        display: table;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+    }
+    .section-title-light {
+        font-size: 3rem;
+        padding: 0;
+        margin-left: 20px;
+        color: #07DAD0;
+    }
+    .section-title-dark {
+        font-size: 3rem;
+        padding: 0;
+        margin-left: 20px;
+        color: #011C24;
+    }
 }

@@ -3,13 +3,22 @@
     vertical-align: middle;
     text-align: right;
     padding: 1em;
-    color: #11242B;
+    color: #07DAD0;
+    text-shadow: 1px 1px 8px #045f7b;
 }
 
 .name-heading {
-    font-size: 5rem;
+    font-size: 7rem;
     font-weight: 500;
     margin-right: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .name-heading {
+        font-size: 4rem;
+        font-weight: 300;
+        margin-right: 20px;
+    }
 }
 
 .home-page {

@@ -1,0 +1,37 @@
+.section-description {
+    color: #011C24;
+    font-size: 2rem;
+    padding: 0;
+    margin-left: 20px;
+    margin-top: 50px;
+    width: 50%;
+}
+
+.tech-logo {
+    height: 50px;
+    margin: 10px;
+}
+
+.tech-logo-aws {
+    height: 35px;
+    margin: 10px;
+}
+
+.card {
+    background-color: #84fff9;
+}
+
+.card-title {
+    color: #011C24;
+}
+
+@media only screen and (max-width: 600px) {
+    .section-description {
+        color: #011C24;
+        font-size: 1rem;
+        padding: 0;
+        margin-left: 20px;
+        margin-top: 10px;
+        width: 90%;
+    }
+}

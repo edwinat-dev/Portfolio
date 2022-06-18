@@ -1,0 +1,90 @@
+.container {
+    background: #fff;
+    padding: 20px 20px;
+    color: #07DAD0;
+    background-color: #011C24;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #0000005e;
+}
+
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0px 12px 0px;
+}
+
+form .user-details .input-box {
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 25px;
+}
+
+.user-details .input-box input {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    color: #ccc;
+    background-color: #0000008c;
+    border: 1px solid #0000008c;
+    padding-left: 10px;
+    font-size: 20px;
+    transition: all 0.3 ease;
+}
+
+.user-details .input-box .details {
+    display: block;
+    font-weight: 300;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box textarea {
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #0000008c;
+    color: #ccc;
+    background-color: #0000008c;
+    padding-left: 10px;
+    font-size: 20px;
+    transition: all 1 ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box textarea:focus {
+    border-color: #15698276;
+    border-width: 2px;
+}
+
+form .button {
+    height: 50px;
+    margin: 15px 0px;
+}
+
+form .button input {
+    height: 100%;
+    width: 100px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #07DAD0;
+    color: #011C24;
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: 2px 2px 5px #000000;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        padding: 10px 15px;
+    }
+    form .user-details .input-box {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    form .button {
+        height: 40px;
+        margin: 5px 0px;
+    }
+}

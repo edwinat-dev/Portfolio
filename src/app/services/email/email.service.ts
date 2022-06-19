@@ -7,7 +7,8 @@ export class EmailService {
 
   constructor() { }
 
-  sendMail(contactForm: ContactForm): void{
-    console.log("From Service: ", contactForm)
+  sendMail(contactForm: ContactForm): boolean{
+    console.log("From Service: ", contactForm);
+    return true;
   }
 }

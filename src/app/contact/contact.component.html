@@ -4,34 +4,34 @@
     </h1>
 
     <div class="container">
-        <form action="#" class="contactform">
+        <form action="#" class="contactform" [formGroup]="form">
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">First Name</span>
-                    <input type="text" placeholder="required">
+                    <input type="text" placeholder="required" formControlName="firstname">
                 </div>
                 <div class="input-box">
                     <span class="details">Last Name</span>
-                    <input type="text" placeholder="required">
+                    <input type="text" placeholder="required" formControlName="lastname">
                 </div>
                 <div class="input-box">
                     <span class="details">Email</span>
-                    <input type="text" placeholder="required">
+                    <input type="text" placeholder="required" formControlName="email">
                 </div>
                 <div class="input-box">
                     <span class="details">Phone</span>
-                    <input type="text" placeholder="optional">
+                    <input type="number" placeholder="optional" formControlName="phone">
                 </div>
 
                 <div class="input-box">
                     <span class="details">Comments</span>
-                    <textarea placeholder="optional" id="" cols="30" rows="2"></textarea>
+                    <textarea placeholder="optional" id="" cols="30" rows="2" formControlName="comments"></textarea>
                 </div>
 
 
             </div>
             <div class="button">
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" (click)="submitContact()">
             </div>
         </form>
     </div>

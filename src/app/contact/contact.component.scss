@@ -74,6 +74,86 @@ form .button input {
     box-shadow: 2px 2px 5px #000000;
 }
 
+form .button input:disabled {
+    box-shadow: none;
+    background-color: #205952;
+    color: #000000;
+}
+
+form .button input:enabled {
+    &:not(.disable):hover {
+        box-shadow: 2px 2px 10px #000000;
+        background-color: #023949;
+        color: #07DAD0;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.alert {
+    color: #07DAD0;
+    background-color: #023849d8;
+    padding: 10px 40px;
+    min-width: 420px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    border-radius: 0;
+    border-left: 4px solid #205952;
+    overflow: hidden;
+}
+
+.alert.none {
+    display: none;
+}
+
+.alert.show {
+    animation: slide_in 0.5s ease forwards;
+}
+
+@keyframes slide_in {
+    0% {
+        transform: translateX(100%);
+    }
+    40% {
+        transform: translateX(-1%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.alert.hide {
+    animation: slide_out 0.5s ease forwards;
+}
+
+@keyframes slide_out {
+    0% {
+        transform: translateX(0%);
+    }
+    40% {
+        transform: translateX(-1%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.alert .close-button {
+    color: #000000;
+    background-color: #07DAD0;
+    position: absolute;
+    right: 15px;
+    padding: 15px;
+    top: 50%;
+    font-size: large;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.alert .close-button:hover {
+    background-color: #0a857e;
+}
+
 @media only screen and (max-width: 600px) {
     .container {
         max-width: 100%;

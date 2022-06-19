@@ -8,7 +8,7 @@ export class ContactForm {
     
     public email!: string;
 
-    public phone!: number;
+    public phone!: string;
 
     public comments!: string;
   }

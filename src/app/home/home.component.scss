@@ -8,15 +8,30 @@
 }
 
 .name-heading {
-    font-size: 7rem;
-    font-weight: 500;
-    margin-right: 20px;
+    font-size: 5rem;
+    margin-right: 40px;
+}
+
+.social-icons {
+    height: 35px;
+    margin: 10px;
+    margin-right: 30px;
+    margin-right: 40px;
+}
+
+.social-icons:hover {
+    filter: brightness(70%) grayscale(100%);
 }
 
 @media only screen and (max-width: 600px) {
     .name-heading {
         font-size: 4rem;
-        font-weight: 300;
+        margin-right: 20px;
+    }
+    .social-icons {
+        height: 25px;
+        margin: 10px;
+        margin-right: 20px;
         margin-right: 20px;
     }
 }

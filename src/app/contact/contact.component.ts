@@ -12,8 +12,9 @@ import { ContactForm } from '../dto/contactForm';
 export class ContactComponent implements OnInit {
 
   form! : FormGroup;
-  formDto! : ContactForm
-  alert! : any;
+  formDto! : ContactForm;
+  alertStatus : boolean = false;
+  alertMessage: string = "";
 
 
   constructor(private fomrBuilder: FormBuilder, private emailService: EmailService) { }
@@ -29,21 +30,29 @@ export class ContactComponent implements OnInit {
       }
       
     )
-    this.alert = document.getElementById("alert");
+    
     // this.form.valueChanges.subscribe(() => {
     //   console.log(this.form.get("comments")?.value);
     // });
   }
 
-  submitContact(): void{
+  async submitContact(): Promise<void>{
     console.log(this.form.value);
     this.formDto = this.form.value;
-    var result = this.emailService.sendMail(this.formDto);
+    var result = (await this.emailService.sendMail(this.formDto))
+    .subscribe(
+      (data) => {
+        console.log("API Response: ",data);
+        if(data.success){
+          this.alertMessage = "Thank you. I'll get back to you ASAP";
+          this.alertStatus = true;
+        }
+      }
+    )
+
+    console.log(result);
 
     
-    this.alert?.classList.remove("hide");
-    this.alert?.classList.remove("none");
-    this.alert?.classList.add("show");
 
     // if(result){
     //   alert("Success");
@@ -53,10 +62,10 @@ export class ContactComponent implements OnInit {
     // }
   }
 
-  dismissAlert(): void{
-    this.alert?.classList.remove("show");
-    this.alert?.classList.remove("none");
-    this.alert?.classList.add("hide");
+  dismissAlert(sttus: boolean): void{
+    this.alertStatus = sttus;
   }
+
+  
 
 }

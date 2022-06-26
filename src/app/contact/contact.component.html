@@ -3,10 +3,7 @@
         Contact
     </h1>
 
-    <div class="alert none" id="alert">
-        <span>Alert</span>
-        <span class="close-button" (click)="dismissAlert()">X</span>
-    </div>
+    <app-alert [status]="alertStatus" (newItemEvent)="dismissAlert($event)" [alertMessage]="alertMessage"></app-alert>
 
     <div class="container">
         <form action="#" class="contactform" [formGroup]="form">

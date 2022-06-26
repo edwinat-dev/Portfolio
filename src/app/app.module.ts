@@ -9,8 +9,11 @@ import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { EmailService } from './services/email/email.service';
+import { AlertComponent } from './core/alert/alert.component';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -18,12 +21,14 @@ import { EmailService } from './services/email/email.service';
     AboutComponent,
     PortfolioComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CoreModule,
+    HttpClientModule
   ],
   providers: [
     EmailService

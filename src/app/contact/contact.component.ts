@@ -30,36 +30,19 @@ export class ContactComponent implements OnInit {
       }
       
     )
-    
-    // this.form.valueChanges.subscribe(() => {
-    //   console.log(this.form.get("comments")?.value);
-    // });
   }
 
   async submitContact(): Promise<void>{
-    console.log(this.form.value);
     this.formDto = this.form.value;
     var result = (await this.emailService.sendMail(this.formDto))
     .subscribe(
       (data) => {
-        console.log("API Response: ",data);
         if(data.success){
-          this.alertMessage = "Thank you. I'll get back to you ASAP";
+          this.alertMessage = "Thanks for reaching out";
           this.alertStatus = true;
         }
       }
     )
-
-    console.log(result);
-
-    
-
-    // if(result){
-    //   alert("Success");
-    // }
-    // else{
-    //   alert("Failed")
-    // }
   }
 
   dismissAlert(sttus: boolean): void{
